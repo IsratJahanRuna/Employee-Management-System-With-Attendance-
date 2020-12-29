@@ -1,0 +1,57 @@
+<! DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+	<title>Attendance</title>
+	<style type="text/css">
+	*{margin: 0; padding: 0;}
+	body{background: white; width:100%; margin-top:50px;}
+	.login{background:glass; padding:20px;margin:auto;text-align:center; width:350px; height:20px;margin-top:50px; margin-bottom:30px}
+	.formcontainer{background-color:glass;padding:50px; width:300px;height:200px; solid black; }
+	.container{font-family: arial block; text-decoration: none;list-style-type: none; color: black;}
+	.buttond input{background: black; width:100%; text-align:center;padding:8px;height:30px;border:none; color:white;font-family:arial block;}
+	.buttond input:hover{background:transparent;color:#0363FB;}
+	.full{border: 1px solid black; width:450px; margin:auto;}
+	.full:hover{background:transparent; background-color: #819FF7;transform:translateX(-10px); width: 450px; border-top: 2px solid blue; border-bottom: 2px solid blue;margin:auto; }
+	.icon{font-size:34px;}
+	</style>
+	
+	</head>
+	<body>
+	
+	<form method="POST" action="password_check.php">
+	<div class="full">
+	  <div class="login">
+	  <div class="icon">
+	  <i class="fas fa-concierge-bell"></i>
+	  </div>
+      <h1>Attendance</h1>
+	  
+	  </div>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="uname"><strong><li><i class="fas fa-users"></i></strong></label>
+        <input type="text" placeholder="Enter Username" name="uname" style="padding:5px;" required><br/><br/>
+        <label for="psw"><strong><i class="fas fa-lock"></i></strong></label>
+        <input type="password" placeholder="Enter Password" name="psw" style="padding:5px;" required><br/><br/>
+      </div>
+	  <div class="buttond">
+      <input type="submit" value="LOGIN"><br/><br/>
+	  </div>
+	  <?php
+	     if(isset($_REQUEST["wrong-info"]))
+		 {
+		 echo $_REQUEST["error"];
+		 }
+	  
+	  ?>
+      
+	  </div>
+	  </div>
+    </form>
+	
+	</body>
+	</html>
